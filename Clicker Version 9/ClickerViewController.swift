@@ -12,11 +12,11 @@ class ClickerViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     var counter = 0
-    var time = 0.0
+    var time: Float = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let _ = Timer(timeInterval: 0.1, repeats: true) { (_) in
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
             self.time += 0.1
         }
     }
