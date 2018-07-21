@@ -10,6 +10,9 @@ import UIKit
 
 class ClickerViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    var counter = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +23,8 @@ class ClickerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func tapped(_ sender: Any) {
+    }
+    
 }
 
