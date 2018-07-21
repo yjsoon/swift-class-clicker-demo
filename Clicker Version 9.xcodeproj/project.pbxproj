@@ -12,6 +12,7 @@
 		AF0DE7532102C0890099C294 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0DE7512102C0890099C294 /* Main.storyboard */; };
 		AF0DE7552102C08C0099C294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0DE7542102C08C0099C294 /* Assets.xcassets */; };
 		AF0DE7582102C08C0099C294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0DE7562102C08C0099C294 /* LaunchScreen.storyboard */; };
+		AF0DE7602102C3B80099C294 /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DE75F2102C3B80099C294 /* ScoreTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		AF0DE7542102C08C0099C294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF0DE7572102C08C0099C294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF0DE7592102C08C0099C294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF0DE75F2102C3B80099C294 /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				AF0DE74D2102C0890099C294 /* AppDelegate.swift */,
 				AF0DE74F2102C0890099C294 /* ClickerViewController.swift */,
 				AF0DE7512102C0890099C294 /* Main.storyboard */,
+				AF0DE75F2102C3B80099C294 /* ScoreTableViewController.swift */,
 				AF0DE7542102C08C0099C294 /* Assets.xcassets */,
 				AF0DE7562102C08C0099C294 /* LaunchScreen.storyboard */,
 				AF0DE7592102C08C0099C294 /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				AF0DE7502102C0890099C294 /* ClickerViewController.swift in Sources */,
 				AF0DE74E2102C0890099C294 /* AppDelegate.swift in Sources */,
+				AF0DE7602102C3B80099C294 /* ScoreTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
