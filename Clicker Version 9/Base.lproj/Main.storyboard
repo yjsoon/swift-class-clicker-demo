@@ -75,12 +75,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgG-Xd-1Oo">
+                                <rect key="frame" x="149.5" y="257" width="76" height="153"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="128"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="ZgG-Xd-1Oo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8P3-Gr-1Vm"/>
                             <constraint firstItem="Ydt-vE-ntC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="LMV-Gg-lCT"/>
                             <constraint firstItem="Ydt-vE-ntC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="P42-bk-Lob"/>
+                            <constraint firstItem="ZgG-Xd-1Oo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bPU-dP-K6P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -88,6 +96,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="countdownLabel" destination="ZgG-Xd-1Oo" id="OV3-Zt-f4k"/>
                         <outlet property="label" destination="Ydt-vE-ntC" id="7wn-yx-lLn"/>
                         <segue destination="wUl-Wa-N0d" kind="unwind" identifier="unwindFromClicker" unwindAction="unwindToScoreTableWithSegue:" id="2zH-GC-HYt"/>
                     </connections>
