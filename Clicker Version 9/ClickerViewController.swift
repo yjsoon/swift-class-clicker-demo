@@ -12,6 +12,7 @@ class ClickerViewController: UIViewController {
     
     static let UNWIND_IDENTIFIER = "unwindFromClicker"
     let EXIT_ANIMATION_DURATION = 0.6
+    let PULSE_ANIMATION_DURATION = 2.5
 
     @IBOutlet weak var label: UILabel!
     var counter = 0
@@ -22,6 +23,19 @@ class ClickerViewController: UIViewController {
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
             self.time += 0.1
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: PULSE_ANIMATION_DURATION,
+                       delay: 0,
+                       options: [.autoreverse, .repeat, .allowUserInteraction],
+                       animations: {
+                        self.label.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+                                                .concatenating(CGAffineTransform(rotationAngle: .pi))
+                        self.view.backgroundColor = .green
+        }, completion: nil)
+        
+        
     }
 
     @IBAction func tapped(_ sender: Any) {
@@ -36,7 +50,7 @@ class ClickerViewController: UIViewController {
                 self.view.backgroundColor = .red
             }) { (_) in
                 self.performSegue(withIdentifier: ClickerViewController.UNWIND_IDENTIFIER, sender: self)
-                self.time -= EXIT_ANIMATION_DURATION
+                self.time -= Float(self.EXIT_ANIMATION_DURATION)
             }
             
         }
