@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Scores-->
+        <!--Root View Controller-->
         <scene sceneID="uYf-k2-lWf">
             <objects>
                 <tableViewController id="Tuo-3Q-FBY" customClass="ScoreTableViewController" customModule="Clicker_Version_9" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scoreCell" id="aDk-0f-Zsc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aDk-0f-Zsc">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aDk-0f-Zsc" id="2bv-EJ-YRR">
@@ -33,13 +33,7 @@
                             <outlet property="delegate" destination="Tuo-3Q-FBY" id="w4b-Sa-ssa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Scores" id="E05-bo-fhy">
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="K00-m3-Kvv">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="ct5-rG-buz"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="E05-bo-fhy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8N-lT-9na" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
