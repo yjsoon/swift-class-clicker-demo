@@ -37,6 +37,14 @@ class ScoreTableViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func unwindToScoreTable(segue: UIStoryboardSegue) {
+        if segue.identifier == "unwindFromClicker" {
+            let source = segue.source as! ClickerViewController
+            scores.append(source.time)
+            tableView.reloadData()
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

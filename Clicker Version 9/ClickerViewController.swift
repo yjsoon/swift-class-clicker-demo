@@ -26,6 +26,7 @@ class ClickerViewController: UIViewController {
         label.text = String(counter)
         if counter == 30 {
             print("You're done! You took \(time) seconds")
+            performSegue(withIdentifier: "unwindFromClicker", sender: self)
         }
     }
     

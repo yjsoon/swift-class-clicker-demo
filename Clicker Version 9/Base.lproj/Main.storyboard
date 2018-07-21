@@ -89,9 +89,11 @@
                     </view>
                     <connections>
                         <outlet property="label" destination="Ydt-vE-ntC" id="7wn-yx-lLn"/>
+                        <segue destination="wUl-Wa-N0d" kind="unwind" identifier="unwindFromClicker" unwindAction="unwindToScoreTableWithSegue:" id="2zH-GC-HYt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="wUl-Wa-N0d" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="n8f-wZ-wYU">
                     <connections>
                         <action selector="tapped:" destination="BYZ-38-t0r" id="7jb-WP-oz1"/>
