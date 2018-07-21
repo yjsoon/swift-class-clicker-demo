@@ -11,6 +11,8 @@ import UIKit
 class ScoreTableViewController: UITableViewController {
     
     var scores: [Float] = []
+    let SCORE_CELL_IDENTIFIER = "scoreCell"
+    let SAVE_KEY = "scores"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ class ScoreTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "scoreCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: SCORE_CELL_IDENTIFIER, for: indexPath)
 
         if let label = cell.textLabel {
             label.text = String(scores[indexPath.row])
@@ -38,10 +40,10 @@ class ScoreTableViewController: UITableViewController {
     }
     
     @IBAction func unwindToScoreTable(segue: UIStoryboardSegue) {
-        if segue.identifier == "unwindFromClicker" {
+        if segue.identifier == ClickerViewController.UNWIND_IDENTIFIER {
             let source = segue.source as! ClickerViewController
             scores.append(source.time)
-            UserDefaults.standard.set(scores, forKey:"scores")
+            UserDefaults.standard.set(scores, forKey:SAVE_KEY)
             tableView.reloadData()
         }
     }
