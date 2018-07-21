@@ -12,16 +12,20 @@ class ClickerViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     var counter = 0
+    var time = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Timer(timeInterval: 0.1, repeats: true) { (_) in
+            self.time += 0.1
+        }
     }
 
     @IBAction func tapped(_ sender: Any) {
         counter += 1
         label.text = String(counter)
         if counter == 30 {
-            print("You're done!")
+            print("You're done! You took \(time) seconds")
         }
     }
     
