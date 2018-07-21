@@ -11,6 +11,7 @@ import UIKit
 class ClickerViewController: UIViewController {
     
     static let UNWIND_IDENTIFIER = "unwindFromClicker"
+    let EXIT_ANIMATION_DURATION = 0.6
 
     @IBOutlet weak var label: UILabel!
     var counter = 0
@@ -28,7 +29,16 @@ class ClickerViewController: UIViewController {
         label.text = String(counter)
         if counter == 30 {
             print("You're done! You took \(time) seconds")
-            performSegue(withIdentifier: ClickerViewController.UNWIND_IDENTIFIER, sender: self)
+            UIView.animate(withDuration: EXIT_ANIMATION_DURATION) {
+            }
+            
+            UIView.animate(withDuration: EXIT_ANIMATION_DURATION, animations: {
+                self.view.backgroundColor = .red
+            }) { (_) in
+                self.performSegue(withIdentifier: ClickerViewController.UNWIND_IDENTIFIER, sender: self)
+                self.time -= EXIT_ANIMATION_DURATION
+            }
+            
         }
     }
     

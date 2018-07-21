@@ -16,6 +16,8 @@ class ScoreTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let loadedScores = UserDefaults.standard.array(forKey: SAVE_KEY)
+        scores = loadedScores as? [Float] ?? [Float]()
     }
 
     // MARK: - Table view data source
