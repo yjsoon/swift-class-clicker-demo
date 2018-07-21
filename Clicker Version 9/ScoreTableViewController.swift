@@ -41,6 +41,7 @@ class ScoreTableViewController: UITableViewController {
         if segue.identifier == "unwindFromClicker" {
             let source = segue.source as! ClickerViewController
             scores.append(source.time)
+            UserDefaults.standard.set(scores, forKey:"scores")
             tableView.reloadData()
         }
     }
